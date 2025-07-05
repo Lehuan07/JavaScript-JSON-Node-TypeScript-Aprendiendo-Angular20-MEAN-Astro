@@ -46,3 +46,36 @@ if(edad >= 18){
 else{
     console.log("No sos mayor de edad")
 }
+
+//Ejemplo 4
+
+let buenTiempo = true;
+
+if(buenTiempo){
+    console.log("Nos vamos al parque");
+}
+else{
+    console.log("Nos quedamos en casa")
+}
+
+//Ejemplo 5
+
+let year = 2007;
+
+if(year >= 2000 && year <=2030){
+    console.log("Estamos en la era moderna")
+}
+else if(year > 2030){
+    console.log("Estamos en la era Post Moderna")
+}
+else{
+    console.log("Estas en la era antigua")
+}
+
+//Ejemplo 6
+
+if(year == 2007 || year == 2017 || year == 2027 || year == 2027){
+    console.log("El año acaba en 7")
+}else{
+    console.log("Año desconocido")
+}
