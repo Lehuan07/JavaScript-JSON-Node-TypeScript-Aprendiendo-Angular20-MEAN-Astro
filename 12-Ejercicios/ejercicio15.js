@@ -14,5 +14,8 @@ while(numeroIngresado >= 0){
     
 }
 
-alert(suma)
-alert (contador);
+alert(`La suma total es: ${suma}`);
+alert(`Se ingresaron ${contador} números positivos`);
+
+let promedio = suma / contador;
+alert(`El promedio es: ${promedio.toFixed(2)}`);
