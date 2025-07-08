@@ -12,9 +12,10 @@ Hace un programa para que pueda adivinar el numero
 const adivinanza = 7;
 let ingreseNumero = 0;
 let validar = false;
+let intentos = 0;
 do{
 ingreseNumero = parseInt(prompt("Ingrese un numero a ver si adivinas"));
-
+    intentos++;
     if(ingreseNumero !== adivinanza){
         alert("segui participando");
     }
@@ -25,6 +26,6 @@ ingreseNumero = parseInt(prompt("Ingrese un numero a ver si adivinas"));
 }
 while(validar !== true);
 
-alert("La pegaste en el ojosky");
+alert(`La pegaste en el ojosky te llevo ${intentos} intento(s)`);
 
 
