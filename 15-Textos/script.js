@@ -123,4 +123,7 @@ let micadena = "Pablito clavó un clavito";
 document.write(`<h3>Como repetir palabras</h3>
     Para hacer esto se utiliza .search("Mas palabra a buscar") <br>
     Ejemplo: let micadena = "Pablito clavó un clavito"; <br>
-    ${micadena.search("clavó")} En este caso buscamos Clavó dandome la posición`)
+    ${micadena.search("clavó")} En este caso buscamos Clavó dandome la posición <br>
+    Tambien se puede utilizar .match() devuelve un objeto mas completo`)
+
+//
