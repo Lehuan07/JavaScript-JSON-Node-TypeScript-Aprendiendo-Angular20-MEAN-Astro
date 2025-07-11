@@ -8,7 +8,7 @@ function calcularFactorial(numero) {
     if (numero < 0) {
         return "El factorial no está definido para números negativos.";
     }
-    if (numero === 0 || numero === 1) {
+    if (numero <= 1) {
         return 1;
     }
     let factorial = 1;
