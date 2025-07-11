@@ -1,5 +1,5 @@
 /*
-Ejercicio 26:
+Ejercicio 27:
 
 Crea un array de personajes de peliculas y
 clasificalos en grupos (heroes, villanos etc.)
