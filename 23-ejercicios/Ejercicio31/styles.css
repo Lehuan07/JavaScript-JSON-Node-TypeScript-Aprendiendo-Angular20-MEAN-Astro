@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #9a9a9a;
+}
+
+.layout{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout__semaforo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.semaforo__carcaza{
+    width: 15rem;
+    height: 30rem;
+    border: 8px solid #aa2;
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carcaza{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 8px solid #fff;
+}
+
+.rojo.activa{
+    background-color: #f22;
+}
+
+.amarillo.activa{
+    background-color: #eeee01;
+}
+
+.verde.activa{
+    background-color: #06bb06;
+}
+
+.layou__mastil{
+    width: 8rem;
+    height: 30rem;
+    padding: 1rem;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mastil__boton{
+    border: 1px solid #f9f9f9;
+    background: #4a4;
+    height: 8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: .3s all ease;
+}
+
+.mastil__boton:hover{
+    background: rgb(39, 106, 39);
+    color: #f9f9f9;
+}
