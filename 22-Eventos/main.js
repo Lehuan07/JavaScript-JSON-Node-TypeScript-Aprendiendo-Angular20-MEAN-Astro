@@ -80,3 +80,114 @@ superFormulario.addEventListener("submit", (event) =>{
     alert(correo)
     alert(genero)
 });
+
+//!Input
+
+let inputNombre = document.querySelector("#nombre");
+
+inputNombre.addEventListener("input", function(){
+    console.log("El usuario escribio " + this.value)
+})
+
+//!Change
+
+let selecGenero = document.querySelector("#genero");
+
+selecGenero.addEventListener("change", ()=>{
+    console.warn("Seleccionaste ah " + selecGenero.value)
+
+})
+
+
+//!Focus
+
+let campoEmail = document.querySelector("#email");
+
+campoEmail.addEventListener("focus", () =>{
+    console.log("Mira como me concentro cuando me apretas")
+
+    campoEmail.style.border = "5px solid red"
+})
+
+//!Blur
+
+campoEmail.addEventListener("blur", function(){
+    console.log("Por que me abandonas?")
+    campoEmail.style.border = "1px solid gray"
+})
+
+//!change
+
+campoEmail.addEventListener("change", function(){
+    console.log("Me activo cuando cambio y te salis")
+})
+
+//*Eventos Ventana
+
+//! Scroll
+
+window.addEventListener("scroll", () => {
+    console.log("¡Estás scrolleando!");
+});
+
+//! Resize
+
+window.addEventListener("resize", () => {
+    console.log("Redimensionaste la ventana");
+});
+
+//*Eventos PortaPapeles
+
+//!Copy
+
+let portaPapeles = document.querySelector("#portaPapeles")
+
+portaPapeles.addEventListener("copy", () =>{
+    alert("Que copiaaa?")
+    navigator.clipboard.writeText("")
+})
+
+//!Paste
+
+portaPapeles.addEventListener("paste", function() {
+    alert("Pegaste el texto como un pro")
+})
+
+//!Cut
+
+portaPapeles.addEventListener("cut", ()=>{
+    alert("Cuidado con las tijeras, me vas a cortar!")
+})
+
+
+
+//* Dejar de escuchar click
+//!Remove (en este caso evento click)
+
+function alertita(){
+    alert("Botoncito2Activado")
+
+}
+
+let botoncito2 = document.querySelector("#botoncito2");
+botoncito2.addEventListener("click", alertita)
+
+setTimeout(() =>{
+    botoncito2.removeEventListener("click", alertita)
+    alert("Botoncito2Desactivado")
+}, 5000);
+
+//* Propagacion de eventos, burbugeo o publing
+
+let cajaPadre = document.querySelector("#cajaPadre");
+let botonHijo = document.querySelector("#botonHijo");
+
+cajaPadre.addEventListener("click", () =>{
+    alert("Tocaste el elemento PADRE!")
+})
+
+botonHijo.addEventListener("click", function(event){
+    event.stopPropagation();
+    alert("Tocaste el elemento hijo")
+})
+
