@@ -12,13 +12,7 @@ let areaTexto = document.querySelector("#areaTexto");
 let conteo = document.querySelector("#contador");
 let contador = 0
 
-areaTexto.addEventListener("keydown", function(event){
-    //Validamos teclas
-    const teclasValidas = [
-        "Enter", " ", // enter y espacio
-    ];
-    if (event.key.length === 1 || teclasValidas.includes(event.key)) {
-        contador++;
-        conteo.textContent = `Usted ingresó ${contador} número de letras`;
-    }
-})
+areaTexto.addEventListener("input", () => {
+    const cantidad = areaTexto.value.length;
+    conteo.textContent = `Usted ingresó ${cantidad} caracteres`;
+});
