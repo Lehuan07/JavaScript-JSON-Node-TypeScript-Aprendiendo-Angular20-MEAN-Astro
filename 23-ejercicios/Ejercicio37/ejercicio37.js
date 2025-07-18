@@ -9,9 +9,10 @@ let nombre = document.querySelector("#nombre");
 let apellido = document.querySelector("#apellido");
 let edad = document.querySelector("#edad");
 let boton = document.querySelector("#btn");
+let formulario = document.querySelector("#formulario");
 let parrafo = document.querySelector("#parrafo");
 
-boton.addEventListener("click", (event)=>{
+formulario.addEventListener("submit", (event)=>{
     event.preventDefault();
     let nombreImpreso = nombre.value;
     let apellidoImpreso =apellido.value;
