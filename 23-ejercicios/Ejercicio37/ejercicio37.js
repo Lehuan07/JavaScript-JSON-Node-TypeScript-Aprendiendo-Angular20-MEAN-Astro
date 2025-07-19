@@ -16,11 +16,16 @@ formulario.addEventListener("submit", (event)=>{
     event.preventDefault();
     let nombreImpreso = nombre.value;
     let apellidoImpreso =apellido.value;
-    let edadImpresa = edad.value;
+    let edadImpresa = parseInt(edad.value);
     if(!nombre.value || !apellido.value || !edad.value){
         alert("complete todos los campos")
         return;
-    }
+    }if(edadImpresa<0){
+        alert("Edad Incorrecta")
+    }if (isNaN(edadImpresa)) {
+    alert("La edad debe ser un número");
+    return;
+    }else{
 
     parrafo.innerHTML = `
                         Se acaba de registrar como ${nombreImpreso} ${apellidoImpreso} <br>
@@ -30,4 +35,5 @@ formulario.addEventListener("submit", (event)=>{
     nombre.value = "";
     apellido.value = "";
     edad.value = "";
+    }
 })
