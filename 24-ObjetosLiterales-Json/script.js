@@ -56,4 +56,35 @@ console.log(pelicula.genero)
 
 //Objetos Json
 
+/*JSON significa JavaScript Objet Notation.
+Y es un formato de texto para estructurar datos y es muy importante
+para la comunicacion de datos entre servidores y clientes en la web*/
+//!Es una forma de guardar o enviar objetos en formato de texto
 
+let palaDePadel ={
+    Titulo: "Metalbone",
+    marca: "Adidas",
+    anio: 2002,
+    peso: 347,
+    forma: "Diamante",
+    dureza: "Media"
+}
+
+console.log(palaDePadel);
+
+let palaDePadelJSON = JSON.stringify(palaDePadel);
+
+console.log(palaDePadelJSON);
+
+let objetoConvertido = JSON.parse(palaDePadelJSON);
+
+console.log(objetoConvertido);
+
+//*Recorrer un objeto
+
+let caja = document.querySelector("#datos");
+
+for(let clave in palaDePadel){
+    caja.innerHTML += `<p>${clave}: ${palaDePadel[clave]}</p>`
+
+}
