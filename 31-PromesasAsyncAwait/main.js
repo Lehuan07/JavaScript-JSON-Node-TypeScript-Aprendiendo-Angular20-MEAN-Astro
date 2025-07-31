@@ -50,6 +50,30 @@ function servirMilanesa(){
     })
 }
 
+
+//? Async y await
+
+async function servirPlatos() {    
+    try{
+        let resultado1 = await servirPizza();
+        if(resultado1 != "Pizzeta"){
+            throw new Error("La piza no salio bien, no es lo que queria el cliente")
+        }else{
+            console.log(resultado1);
+            
+        }
+        
+        let resultado2 = await servirHamburguesa();
+        console.log(resultado2);
+
+    let resultado3 = await servirMilanesa();
+    console.log(resultado3);
+    }
+    catch(error){
+        console.error("Hubo un error: ", error)
+    }
+}
+
 /*
 servirPizza()
     .then(resultado1=>{
@@ -69,32 +93,5 @@ servirPizza()
         console.log("Error en las comandas: ", error)
     })
 */
-
-
-
-//? Async y await
-
-async function servirPlatos() {
-
-    try{
-    let resultado1 = await servirPizza();
-    if(resultado1 != "Pizzeta"){
-        throw new Error("La piza no salio bien, no es lo que queria el cliente")
-    }else{
-        console.log(resultado1);
-
-    }
-
-    let resultado2 = await servirHamburguesa();
-    console.log(resultado2);
-
-    let resultado3 = await servirMilanesa();
-    console.log(resultado3);
-    }
-    catch(error){
-        console.error("Hubo un error: ", error)
-    }
-}
-
 
 servirPlatos()
